@@ -1,0 +1,7 @@
+{
+  "name": "appcow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
