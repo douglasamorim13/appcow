@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Planilha de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-label>Pokémon Yellow</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mega Man X</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Legend of Zelda</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pac-Man</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Super Mario World</ion-label>
+    </ion-item>
+  </ion-list> -->
+
+ <!-- <div *ngFor="let item of listItem">
+   {{item.id}}
+ </div> -->
+
+  <ion-item-sliding *ngFor="let item of listItem">
+    <ion-item>
+      <ion-label>{{item.id}}</ion-label>
+      <ion-label>Quantidade: {{item.quantidade}}</ion-label>
+      <ion-label>Peso: {{item.peso}} KG</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)">Excluir</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+  
+</ion-content>

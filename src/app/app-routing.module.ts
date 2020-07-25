@@ -8,6 +8,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'planilha-compra',
+    loadChildren: () => import('./planilha-compra/planilha-compra.module').then( m => m.PlanilhaCompraModule)
+  },
+  {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   }
